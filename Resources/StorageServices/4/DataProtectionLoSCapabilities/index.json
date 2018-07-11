@@ -1,0 +1,85 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#DataProtectionLoSCapabilites.DataProtectionLoSCapabilites",
+    "@odata.id": "/redfish/v1/StorageServices/4/DataProtectionLoSCapabilites",
+    "@odata.type": "#DataProtectionLoSCapabilites_1_0_0.DataProtectionLoSCapabilites",
+    "MinimumLifetime": "P1M",
+    "Name": "DataProtectionLoSCapabilites",
+    "SupportedDataProtectionLinesOfService": [
+        {
+            "IsIsolated": true,
+            "MinLifetime": "P4M",
+            "RecoveryGeographicObjective": "Region",
+            "RecoveryPointObjective": "P30D",
+            "RecoveryTimeObjective": "Nearline",
+            "ReplicaAccessLocation": {
+                "Address1": "",
+                "Address2": "",
+                "Address3": "",
+                "Building": "",
+                "City": "Providence",
+                "Country": "",
+                "GPSCoords": "",
+                "Item": "",
+                "OtherLocationInfo": "",
+                "PostalCode": "",
+                "Rack": "",
+                "Room": "",
+                "Row": "",
+                "Shelf": "",
+                "State": "",
+                "Territory": ""
+            },
+            "ReplicaClassOfService": {
+                "@odata.id": "/redfish/v1/StorageServices/1/ClassesOfService/Storage/Silver_Providence"
+            },
+            "ReplicaType": "Clone",
+            "Schedule": {
+                "EnabledDaysOfMonth": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "EnabledDaysOfWeek": [
+                    "Sunday"
+                ],
+                "EnabledMonthsOfYear": [],
+                "InitialStartTime": "P4M",
+                "RecurrenceInterval": "P1M"
+            }
+        }
+    ],
+    "SupportedLocations": [],
+    "SupportedRecoveryGeographicObjectives": [
+        "Server",
+        "Rack",
+        "RackGroup",
+        "Row",
+        "DataCenter",
+        "Region"
+    ],
+    "SupportedRecoveryObjectiveTimes": [
+        "Immediate",
+        "Online",
+        "Nearline",
+        "Offline"
+    ],
+    "SupportedRecoveryPointObjectiveTimes": [
+        "PT0S",
+        "PT4S",
+        "PT1M",
+        "PT1H"
+    ],
+    "SupportedReplicaOptions": [],
+    "SupportedReplicaTypes": [
+        "Mirror",
+        "Snapshot",
+        "Clone",
+        "TokenizedClone"
+    ],
+    "SupportsIsolated": true
+}

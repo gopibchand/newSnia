@@ -1,0 +1,60 @@
+{
+    "@Redfish.Copyright": "Copyright 2015-2017 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#StorageService.StorageService",
+    "@odata.id": "/redfish/v1/StorageServices/3",
+    "@odata.type": "#StorageServiceCollection.1.0.0.StorageServiceCollection",
+    "ClassesOfService": {
+        "@odata.id": "/redfish/v1/StorageServices/3/ClassesOfService"
+    },
+    "DataProtectionLoSCapabilities": {
+        "@odata.id": "/redfish/v1/StorageServices/3/DataProtectionLoSCapabilities"
+    },
+    "DataSecurityLoSCapabilities": {
+        "@odata.id": "/redfish/v1/StorageServices/3/DataSecurityLoSCapabilities"
+    },
+    "DataStorageLoSCapabilities": {
+        "@odata.id": "/redfish/v1/StorageServices/3/DataStorageLoSCapabilities"
+    },
+    "Drives": {
+        "@odata.id": "/redfish/v1/StorageServices/3/Drives"
+    },
+    "EndpointGroups": {
+        "@odata.id": "/redfish/v1/StorageServices/3/EndpointGroups"
+    },
+    "Endpoints": {
+        "@odata.id": "/redfish/v1/StorageServices/3/Endpoints"
+    },
+    "FileSystems": {
+        "@odata.id": "/redfish/v1/StorageServices/3/FileSystems"
+    },
+    "IOConnectivityLoSCapabilities": {
+        "@odata.id": "/redfish/v1/StorageServices/3/IOConnectivityLoSCapabilities"
+    },
+    "IOPerformanceLoSCapabilities": {
+        "@odata.id": "/redfish/v1/StorageServices/3/IOPerformanceLoSCapabilities"
+    },
+    "Id": "3",
+    "Links": [],
+    "Name": "Storage Service Collection",
+    "Oem": [],
+    "Permissions": [
+        {
+            "Read": "True"
+        },
+        {
+            "Write": "True"
+        }
+    ],
+    "StorageGroups": {
+        "@odata.id": "/redfish/v1/StorageServices/3/StorageGroups"
+    },
+    "StoragePools": {
+        "@odata.id": "/redfish/v1/StorageServices/3/StoragePools"
+    },
+    "StorageSubsystems": {
+        "@odata.id": "/redfish/v1/StorageServices/3/StorageSubsystems"
+    },
+    "Volumes": {
+        "@odata.id": "/redfish/v1/StorageServices/3/Volumes"
+    }
+}

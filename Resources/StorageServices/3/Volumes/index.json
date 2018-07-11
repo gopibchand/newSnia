@@ -1,0 +1,17 @@
+{
+    "@Redfish.Copyright": "Copyright 2015-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#Volume.Volume",
+    "@odata.id": "/redfish/v1/StorageServices/$metadata#/Volumes",
+    "@odata.type": "#VolumeCollection.1.0.0.VolumeCollection",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "Volume Collection",
+    "Permissions": [
+        {
+            "Read": "True"
+        },
+        {
+            "Write": "True"
+        }
+    ]
+}

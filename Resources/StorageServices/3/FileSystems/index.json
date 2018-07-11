@@ -1,0 +1,17 @@
+{
+    "@Redfish.Copyright": "Copyright 2015-2017 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#FileSystems.FileSystems",
+    "@odata.id": "/redfish/v1/StorageServices/$metadata#/FileSystems",
+    "@odata.type": "#FileSystemsCollection.1.0.0.FileSystemsCollection",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "FileSystems Collection",
+    "Permissions": [
+        {
+            "Read": "True"
+        },
+        {
+            "Write": "True"
+        }
+    ]
+}

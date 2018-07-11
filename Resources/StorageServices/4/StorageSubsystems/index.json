@@ -1,0 +1,8 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#StorageSubsystems.StorageSubsystems",
+    "@odata.id": "/redfish/v1/StorageServices/4/StorageSubsystems",
+    "@odata.type": "#StorageSubsystemsCollection_1_0_0.StorageSubsystemsCollection",
+    "Description": "",
+    "Name": "StorageSubsystems"
+}

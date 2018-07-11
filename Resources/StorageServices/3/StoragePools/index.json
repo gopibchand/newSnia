@@ -1,0 +1,17 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2017 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#StoragePools.StoragePools",
+    "@odata.id": "/redfish/v1/StorageServices/$metadata#/StoragePools",
+    "@odata.type": "#StoragePoolsCollection_1_0_0.StoragePoolsCollection",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "StoragePools Collection",
+    "Permissions": [
+        {
+            "Read": "True"
+        },
+        {
+            "Write": "True"
+        }
+    ]
+}

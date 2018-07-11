@@ -1,0 +1,18 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2017 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#IOConnectivityLoSCapabilities.IOConnectivityLoSCapabilities",
+    "@odata.id": "/redfish/v1/StorageServices/4/IOConnectivityLoSCapabilities",
+    "@odata.type": "#IOConnectivityLoSCapabilities_1_0_0.IOConnectivityLoSCapabilities",
+    "MaxSupportedIoOperationsPerSecond": 1000,
+    "Name": "IOConnectivityLoSCapabilities",
+    "SupportedAccessProtocols": [
+        "FC",
+        "SCSI"
+    ],
+    "SupportedIOConnectivityLinesOfService": [
+        {
+            "AccessProtocol": "FC",
+            "MaxSupportedIoOperationsPerSecond": null
+        }
+    ]
+}

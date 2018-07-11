@@ -1,0 +1,45 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#StorageServices/4/ClassesOfService/1",
+    "@odata.id": "/redfish/v1/StorageServices/4/ClassesOfService/1",
+    "@odata.type": "#ClassOfService_1_0_0.ClassOfService",
+    "ClassOfServiceVersion": "01.00.00",
+    "Description": "Gold class of service in Boston",
+    "Id": "1",
+    "LinesOfService": {
+        "DataProtectionLineOfService": [],
+        "DataSecurityLineOfService": {
+            "AntivirusEngineProvider": null,
+            "AntivirusScanPolicies": [],
+            "ChannelEncryptionStrength": "Bits_128",
+            "DataSanitizationPolicy": "CryptographicErase",
+            "HostAuthenticationType": "Ticket",
+            "MediaEncryptionStrength": "Bits_256",
+            "Name": "SecureData",
+            "SecureChannelProtocol": "TLS",
+            "UserAuthenticationType": "Password"
+        },
+        "DataStorageLineOfService": {
+            "Name": "HA-Thin",
+            "ProvisioningPolicy": "Thin",
+            "RecoveryTimeObjective": 0,
+            "SpaceEfficient": true
+        },
+        "IOConnectivityLineOfService": {
+            "AccessProtocol": "FC",
+            "MaxSupportedIoOperationsPerSecond": null,
+            "Name": "FiberChannel"
+        },
+        "IOPerformanceLineOfService": {
+            "AverageIoOperationLatencyMicroseconds": 5000,
+            "IOWorkload": {
+                "Name": "Duplicon:OLTP"
+            },
+            "IoOperationsPerSecondIsLimitedBoolean": "false",
+            "MaxIoOperationsPerSecondPerTerabyte": 133,
+            "Name": "Lite-OLTP-HDD",
+            "SamplePeriod": "PT1M"
+        }
+    },
+    "Name": "GoldBoston"
+}

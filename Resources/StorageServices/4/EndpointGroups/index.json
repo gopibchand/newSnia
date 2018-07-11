@@ -1,0 +1,9 @@
+{
+    "@Redfish.Copyright": "Copyright 2015-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#EndpointGroups.EndpointGroups",
+    "@odata.id": "/redfish/v1/StorageServices/$metadata#/EndpointGroups",
+    "@odata.type": "#EndpointGroupCollection.1.0.0.EndpointGroupCollection",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "EndpointGroups Collection"
+}

@@ -1,0 +1,57 @@
+{
+    "@Redfish.Copyright": "Copyright 2014-2016 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#IOPerformanceLoSCapabilities.IOPerformanceLoSCapabilities",
+    "@odata.id": "/redfish/v1/StorageServices/4/IOPerformanceLoSCapabilities",
+    "@odata.type": "#IOPerformanceLoSCapabilities_1_0_0.IOPerformanceLoSCapabilities",
+    "IoOperationsPerSecondLimitingIsSupported": true,
+    "MaxIoOperationsPerSecondPerTerabyte": 1000,
+    "MaxSamplePeriod": "PT1H",
+    "MinAverageIoOperationLatencyMicroseconds": 200,
+    "MinSamplePeriod": "PT5S",
+    "Name": "IOPerformanceLoSCapabilities",
+    "SupportedIOPerformanceLinesOfService": [
+        {
+            "AverageIoOperationLatencyMicroseconds": 8000,
+            "IOWorkload": {
+                "Name": "Duplicon: OLTP"
+            },
+            "IoOperationsPerSecondIsLimitedBoolean": false,
+            "MaxIoOperationsPerSecondPerTerabyte": 83,
+            "SamplePeriod": "PT1M"
+        },
+        {
+            "AverageIoOperationLatencyMicroseconds": 5000,
+            "IOWorkload": {
+                "Name": "Duplicon: OLTP"
+            },
+            "IoOperationsPerSecondIsLimitedBoolean": "false",
+            "MaxIoOperationsPerSecondPerTerabyte": 133,
+            "SamplePeriod": "PT1M"
+        }
+    ],
+    "SupportedIOWorkloads": [
+        {
+            "Name": "Duplicon:DSS"
+        },
+        {
+            "Name": "Duplicon:OLTP"
+        },
+        {
+            "Components": [
+                {
+                    "AccessPattern ": "SequentialRead",
+                    "AverageIOBytes ": 8192,
+                    "PercentOfData ": 66,
+                    "PercentOfIOPS ": 33
+                },
+                {
+                    "AccessPattern ": "SequentialWrite",
+                    "AverageIOBytes ": 4096,
+                    "PercentOfData ": 33,
+                    "PercentOfIOPS ": 66
+                }
+            ],
+            "Name": "Duplicon:Streaming"
+        }
+    ]
+}

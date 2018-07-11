@@ -1,0 +1,17 @@
+{
+    "@Redfish.Copyright": "Copyright 2015-2017 SNIA. All rights reserved.",
+    "@odata.context": "/redfish/v1/$metadata#ClassesOfService.ClassesOfService",
+    "@odata.id": "/redfish/v1/StorageServices/$metadata#/ClassesOfService",
+    "@odata.type": "#ClassOfServiceCollection.v1_0_0.ClassOfServiceCollection",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "ClassesOfService",
+    "Permissions": [
+        {
+            "Read": "True"
+        },
+        {
+            "Write": "False"
+        }
+    ]
+}
