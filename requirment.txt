@@ -1,0 +1,12 @@
+flask
+setuptools
+markupsafe 
+itsdangerous 
+aniso8601 
+pytz 
+flask_httpauth 
+requests 
+flask_restful 
+StringGenerator 
+urllib3 
+six
