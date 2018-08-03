@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emulator
+  labels:
+    app: snia
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: emulator
+  template:
+    metadata:
+      labels:
+        app: emulator
+    spec:
+      containers:
+      - name: emulator
+        image: venkatarr/emulator
+        ports:
+        - containerPort: 5000
