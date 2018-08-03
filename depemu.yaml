@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: emulator
   labels:
-    app: snia
+    app: emulator
 spec:
   replicas: 2
   selector:
@@ -15,8 +15,10 @@ spec:
         app: emulator
     spec:
       containers:
-      - name: emulator
-        image: venkatarr/emulator
-        imagepullpolicy: Always
+       - name: emulator
+        image: sniaregistry.azurecr.io/emulator
+      imagePullSecrets:
+       - name: acr-auth
+      imagepullpolicy: Always
         ports:
         - containerPort: 5000
