@@ -15,10 +15,10 @@ spec:
         app: emulator
     spec:
       containers:
-       - name: emulator
+      - name: emulator
         image: sniaregistry.azurecr.io/emulator
       imagePullSecrets:
-       - name: acr-auth
+      - name: acr-auth
       imagepullpolicy: Always
-        ports:
-        - containerPort: 5000
+      ports:
+      - containerPort: 5000
