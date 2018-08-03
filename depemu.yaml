@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: emulator
-        image: sniaregistry.azurecr.io/emulator:${BUILD_NUMBER}
+        image: sniaregistry.azurecr.io/emulator:latest
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
