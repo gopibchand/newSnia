@@ -17,5 +17,6 @@ spec:
       containers:
       - name: emulator
         image: venkatarr/emulator
+         imagepullpolicy: Always
         ports:
         - containerPort: 5000
