@@ -1,4 +1,4 @@
-env.DOCKER_IMAGE_NAME = DOCER_HUB
+env.DOCKER_IMAGE_NAME = DOCKER_HUB
 node(jenkins_slave) {
     def app
 
