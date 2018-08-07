@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: emulator
-        image: sniaregistry.azurecr.io/emulator
+        image: venkatarr/emulator
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
