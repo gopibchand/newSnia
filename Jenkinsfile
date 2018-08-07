@@ -1,4 +1,4 @@
-env.DOCKER_HUB = true
+//env.DOCKER_HUB = true
 //agent{
     
 node (label: 'jenkins_slave'){
@@ -31,7 +31,7 @@ node (label: 'jenkins_slave'){
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://registry.hub.docker.com', '$DOCKER_IMAGE_NAME') {
+        docker.withRegistry('https://registry.hub.docker.com', 'evn.$DOCKER_HUB') {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
