@@ -1,4 +1,4 @@
-env.DOCKER_IMAGE_NAME = DOCKER_HUB
+env.DOCKER_HUB = true
 //agent{
     
 node (label: 'jenkins_slave'){
