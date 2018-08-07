@@ -1,8 +1,8 @@
 env.DOCKER_IMAGE_NAME = DOCKER_HUB
-agent{
+//agent{
     
 node {
-    label 'jenkins_slave'
+    //label 'jenkins_slave'
     def app
 
     stage('Clean workspace') {
