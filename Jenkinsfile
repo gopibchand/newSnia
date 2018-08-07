@@ -1,5 +1,8 @@
 env.DOCKER_IMAGE_NAME = DOCKER_HUB
-node(jenkins_slave) {
+agent{
+    
+node {
+    label 'jenkins_slave'
     def app
 
     stage('Clean workspace') {
@@ -33,4 +36,5 @@ node(jenkins_slave) {
             app.push("latest")
         }
     }
-} 
+ }   
+}
