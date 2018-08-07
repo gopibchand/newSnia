@@ -1,7 +1,7 @@
 env.DOCKER_IMAGE_NAME = DOCKER_HUB
 //agent{
     
-node {
+node (label: 'jenkins_slave'){
     //label 'jenkins_slave'
     def app
 
