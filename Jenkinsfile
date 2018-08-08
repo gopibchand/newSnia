@@ -38,7 +38,7 @@ node (label: 'jenkins_slave'){
           //  app.push("latest")
        // }
         stage('Deployment on kubernetes'){
-            sh 'kubectl create -f dumep.yaml'
+            sh 'kubectl create -f depemu.yaml'
         }
         }
  }
