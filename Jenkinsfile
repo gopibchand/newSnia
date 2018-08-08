@@ -37,6 +37,8 @@ node (label: 'jenkins_slave'){
          //   app.push("${env.BUILD_NUMBER}")
           //  app.push("latest")
        // }
-    }
- }   
+        stage('Deployment on kubernetes'){
+            sh 'kubectl create -f dumep.yaml'
+        }
+ }
 //}
