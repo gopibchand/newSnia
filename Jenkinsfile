@@ -36,7 +36,7 @@ node (label: 'jenkins_slave'){
        // docker.withRegistry('https://registry.hub.docker.com', '$DOCKER_IMAGE_NAME') {
          //   app.push("${env.BUILD_NUMBER}")
           //  app.push("latest")
-        }
+       // }
     }
  }   
 //}
