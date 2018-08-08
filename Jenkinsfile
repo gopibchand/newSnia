@@ -40,5 +40,6 @@ node (label: 'jenkins_slave'){
         stage('Deployment on kubernetes'){
             sh 'kubectl create -f dumep.yaml'
         }
+        }
  }
 //}
