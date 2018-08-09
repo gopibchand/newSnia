@@ -1,9 +1,23 @@
-//env.DOCKER_HUB = true
-//agent{
-    
+podTemplate(label: 'jenkins_slave',
+    containers: [
+      
+      
+      containerTemplate(name: 'docker', image: 'docker:1.12.6', command: 'cat', ttyEnabled: true),
+      containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.8.7', ttyEnabled: true, command: 'cat'),
+      containerTemplate(name: 'python', image:  'python:3-slim',  command: 'cat', ttyEnabled: true)
+      ]
+     // containerTemplate(name: 'dind', image: 'docker:18.01.0-ce-dind', privileged: true, resourceRequestCpu: '20m', resourceRequestMemory: '512Mi',),
+      //containerTemplate(name: 'docker-cmds', image: 'docker:18.01.0-ce', ttyEnabled: true, command: 'cat', envVars: [envVar(key: 'DOCKER_HOST', value: 'tcp://localhost:2375')]),
+volumes:[
+hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
+]){
+
+
+
 node (label: 'jenkins_slave'){
     //label 'jenkins_slave'
     def app
+   def IMAGE_NAME = "${env.ACR_LOGINSERVER}/emulator:${BUILD_NUMBER}"
 
     stage('Clean workspace') {
       deleteDir()
@@ -11,28 +25,27 @@ node (label: 'jenkins_slave'){
     
     stage('Clone repository') {
         
-        checkout scm
+        git 'https://github.com/sniaproject/newSnia.git'
     }
 
-    stage('Build image') {
+   //stage('Build image') {
         
-        app = docker.build("venkatarr/emulator")
-    }
+     //   app = 'docker.build ${IMAGE_NAME}'
+     //}
 
-    stage('Push image') {
-        /* Finally, we'll push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag.
-         * Pushing multiple tags is cheap, as all the layers are reused. */
-        sh "docker login -u venkatarr -p ${env.DOCKER_HUB}"
-        app.push ("${env.BUILD_NUMBER}")     
-       // docker.withRegistry('https://registry.hub.docker.com', '$DOCKER_IMAGE_NAME') {
-         //   app.push("${env.BUILD_NUMBER}")
-          //  app.push("latest")
-       // }
+    stage('Build and Push image') {
+       
+       sh "docker build . -t ${env.ACR_LOGINSERVER}/emulator:${BUILD_NUMBER}"
+        sh "docker login ${env.ACR_LOGINSERVER} -u ${env.ACR_ID} -p ${env.ACR_PASSWORD}"
+        sh "docker push ${env.ACR_LOGINSERVER}/emulator:${BUILD_NUMBER}"
+        }
+       
         stage('Deployment on kubernetes'){
+            
+            sh "sed -i 's/imagetag/$BUILD_NUMBER/g' ${pwd()}/depemu.yaml"
             sh 'kubectl create -f depemu.yaml'
+            sh 'kubectl create -f depserv.yaml'
         }
-        }
+        
+     }
  }
-//}
