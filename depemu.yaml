@@ -21,4 +21,4 @@ spec:
         - containerPort: 5000
         imagePullPolicy: Always
       imagePullSecrets:
-        - name: mysecret
+      - name: mysecret
