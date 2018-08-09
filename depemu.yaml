@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: emulator
-        image: ContaineraizationRegistry/emulator
+        image: ContaineraizationRegistry/emulator:imagename
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
