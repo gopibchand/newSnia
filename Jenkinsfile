@@ -5,7 +5,7 @@ podTemplate(label: 'jenkins_slave',
       containerTemplate(name: 'docker', image: 'docker:1.12.6', command: 'cat', ttyEnabled: true),
       containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.8.7', ttyEnabled: true, command: 'cat'),
       containerTemplate(name: 'python', image:  'python:3-slim',  command: 'cat', ttyEnabled: true)
-      ]
+      ],
      // containerTemplate(name: 'dind', image: 'docker:18.01.0-ce-dind', privileged: true, resourceRequestCpu: '20m', resourceRequestMemory: '512Mi',),
       //containerTemplate(name: 'docker-cmds', image: 'docker:18.01.0-ce', ttyEnabled: true, command: 'cat', envVars: [envVar(key: 'DOCKER_HOST', value: 'tcp://localhost:2375')]),
 volumes:[
