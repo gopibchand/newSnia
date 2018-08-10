@@ -8,7 +8,7 @@ podTemplate(label: 'jenkins_slave',
       //containerTemplate(name: 'docker-cmds', image: 'docker:18.01.0-ce', ttyEnabled: true, command: 'cat', envVars: [envVar(key: 'DOCKER_HOST', value: 'tcp://localhost:2375')]),
 volumes:[
     hostPathVolume(mountPath: '/home/python/.python', hostPath: '/tmp/jenkins/.gradle'),
-    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
+    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
 ]
            )
 {
