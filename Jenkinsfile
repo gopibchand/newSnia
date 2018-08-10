@@ -44,8 +44,8 @@ node ('jenkins_slave'){
         stage('Deployment on kubernetes'){
             
             sh "sed -i 's/imagetag/$BUILD_NUMBER/g' ${pwd()}/depemu.yaml"
-            sh 'kubectl create -f depemu.yaml'
-            sh 'kubectl create -f depserv.yaml'
+            sh 'kubectl apply -f depemu.yaml'
+            sh 'kubectl apply -f depserv.yaml'
         }
         
      }
