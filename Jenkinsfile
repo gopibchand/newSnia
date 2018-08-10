@@ -1,7 +1,5 @@
 podTemplate(label: 'jenkins_slave',
     containers: [
-      
-      
       containerTemplate(name: 'docker', image: 'docker:1.12.6', command: 'cat', ttyEnabled: true),
       containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.8.7', ttyEnabled: true, command: 'cat'),
       containerTemplate(name: 'python', image:  'python:3-slim',  command: 'cat', ttyEnabled: true)
@@ -9,12 +7,15 @@ podTemplate(label: 'jenkins_slave',
      // containerTemplate(name: 'dind', image: 'docker:18.01.0-ce-dind', privileged: true, resourceRequestCpu: '20m', resourceRequestMemory: '512Mi',),
       //containerTemplate(name: 'docker-cmds', image: 'docker:18.01.0-ce', ttyEnabled: true, command: 'cat', envVars: [envVar(key: 'DOCKER_HOST', value: 'tcp://localhost:2375')]),
 volumes:[
-hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
-]){
+    hostPathVolume(mountPath: '/home/python/.python', hostPath: '/tmp/jenkins/.gradle'),
+    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
+]
+           )
+{
 
 
 
-node (label: 'jenkins_slave'){
+node ('jenkins_slave'){
     //label 'jenkins_slave'
     def app
    def IMAGE_NAME = "${env.ACR_LOGINSERVER}/emulator:${BUILD_NUMBER}"
