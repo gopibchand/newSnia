@@ -26,7 +26,7 @@ node ('jenkins_slave'){
     
     stage('Clone repository') {
         
-        git 'https://github.com/vramana30/newSnia.git'
+        git 'https://github.com/sniaproject/newSnia.git'
     }
 
    //stage('Build image') {
