@@ -1,6 +1,6 @@
 podTemplate(label: 'jenkins_slave',
     containers: [
-      containerTemplate(name: 'jnlp', image: 'lachlanevenson/jnlp-slave:3.10-1-alpine', args: '${computer.jnlpmac} ${computer.name}', workingDir: '/home/jenkins', resourceRequestCpu: '200m', resourceLimitCpu: '300m', resourceRequestMemory: '256Mi', resourceLimitMemory: '512Mi'),
+    //  containerTemplate(name: 'jnlp', image: 'lachlanevenson/jnlp-slave:3.10-1-alpine', args: '${computer.jnlpmac} ${computer.name}', workingDir: '/home/jenkins', resourceRequestCpu: '200m', resourceLimitCpu: '300m', resourceRequestMemory: '256Mi', resourceLimitMemory: '512Mi'),
       containerTemplate(name: 'docker', image: 'docker:1.12.6', command: 'cat', ttyEnabled: true),
       containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.8.7', ttyEnabled: true, command: 'cat'),
       containerTemplate(name: 'python', image:  'python:3-slim',  command: 'cat', ttyEnabled: true)
